@@ -1,0 +1,85 @@
+@import 'variables';
+@import 'mixins';
+
+// global styles
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Instrument Sans', sans-serif;
+}
+
+#__nuxt,
+#__layout {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  @include center-container;
+  @include p-l-r;
+  padding-top: 24px;
+  padding-bottom: 88px;
+
+  @include xl-breakpoint {
+    @include clear-p-l-r;
+  }
+}
+
+// product grid
+.product-catalog {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  column-gap: 12px;
+  row-gap: 12px;
+
+  @include sm-breakpoint {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include sm-breakpoint {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  @include lg-breakpoint {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+// button styles
+.button {
+  border-radius: $border-radius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 20px 16px 16px;
+  gap: 6px;
+  width: 100%;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.button-normal {
+  color: $color-primary;
+  background-color: $button-normal-color;
+  &:hover {
+    background-color: darken($button-normal-color, 5%);
+  }
+}
+
+.button-blue {
+  color: white;
+  border-radius: 8px;
+  background: linear-gradient(0deg, #462ddf, #462ddf), #1a1a1a;
+}

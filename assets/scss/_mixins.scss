@@ -1,0 +1,90 @@
+@import 'variables';
+
+/*************************************/
+/*    global center for containers   */
+/*************************************/
+@mixin center-container {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*************************************/
+/*   global padding for containers   */
+/*************************************/
+@mixin p-l-r {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@mixin clear-p-l-r {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/***************/
+/*    border   */
+/***************/
+@mixin border {
+  border: 1px solid $border-color;
+}
+
+@mixin border-top {
+  border-top: 1px solid $border-color;
+}
+
+@mixin border-bottom {
+  border-bottom: 1px solid $border-color;
+}
+
+/***************/
+/*   shadow    */
+/***************/
+@mixin drop-shadow {
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+}
+
+/***************/
+/*  menu link  */
+/***************/
+@mixin menu-link {
+  color: $color-secondary;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+/****************/
+/* break points */
+/****************/
+@mixin xs-breakpoint {
+  @media only screen and (min-width: $xsBreakpoint) {
+    @content;
+  }
+}
+
+@mixin sm-breakpoint {
+  @media only screen and (min-width: $smBreakpoint) {
+    @content;
+  }
+}
+
+@mixin md-breakpoint {
+  @media only screen and (min-width: $mdBreakpoint) {
+    @content;
+  }
+}
+
+@mixin lg-breakpoint {
+  @media only screen and (min-width: $lgBreakpoint) {
+    @content;
+  }
+}
+
+@mixin xl-breakpoint {
+  @media only screen and (min-width: $xlBreakpoint) {
+    @content;
+  }
+}
