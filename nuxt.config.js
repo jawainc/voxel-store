@@ -1,6 +1,7 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'server',
+  // target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -11,7 +12,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Shop for the latest fashion trends in men and women clothing, electronics, and jewelry at our online store. We have a wide selection of products to choose from, and our prices are unbeatable.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
