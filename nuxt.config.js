@@ -1,8 +1,4 @@
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
-  target: 'server',
-  // target: 'static',
-
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Voxel Store',
@@ -15,23 +11,18 @@ export default {
       { hid: 'description', name: 'description', content: 'Shop for the latest fashion trends in men and women clothing, electronics, and jewelry at our online store. We have a wide selection of products to choose from, and our prices are unbeatable.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500;600&display=swap'
-      }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    // SCSS file in the project
     '~/assets/scss/main.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/nuxt-client-init.client.js'],
+  plugins: [
+    '~/plugins/nuxt-client-init.client.js'
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -55,5 +46,8 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  build: {
+    ssr: true,
+    extractCSS: true
+  }
 }
