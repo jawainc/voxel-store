@@ -20,27 +20,27 @@ export default {
       )
       return {
         products: data,
-        slug: params.slug
+        slug: params.slug,
       }
     } catch (err) {
       return {
         products: [],
-        slug: 'products'
+        slug: 'products',
       }
     }
   },
   data: () => ({}),
   head() {
     return {
-      title: this.slug.replace(/(^\w|\s\w)/g, m => m.toUpperCase()),
+      title: this.slug.replace(/(^\w|\s\w)/g, (m) => m.toUpperCase()),
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: `Find the perfect ${this.slug} for any occasion at our online store. We have a wide selection of ${this.slug} to choose from.`
-        }
-      ]
+          content: `Find the perfect ${this.slug} for any occasion at our online store. We have a wide selection of ${this.slug} to choose from.`,
+        },
+      ],
     }
-  }
+  },
 }
 </script>

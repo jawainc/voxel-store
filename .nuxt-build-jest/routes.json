@@ -1,0 +1,14 @@
+[
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\Developer\\\\Test\\\\Poligon\\\\Project\\\\ShopProject\\\\voxel-store\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  },
+  {
+    "name": "slug",
+    "path": "/:slug",
+    "component": "D:\\\\Developer\\\\Test\\\\Poligon\\\\Project\\\\ShopProject\\\\voxel-store\\\\pages\\\\_slug.vue",
+    "chunkName": "pages/_slug"
+  }
+]
